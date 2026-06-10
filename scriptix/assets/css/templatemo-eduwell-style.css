@@ -1727,183 +1727,72 @@ responsive
 */
 
 
-body {
-  overflow-x: hidden;
+/* ================= BLOG PAGE FIX ================= */
+
+/* Filters */
+.blog-filters {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 0;
+  margin: 20px 0 40px 0;
 }
 
-@media (max-width: 1330px) {
-  .services .owl-nav .owl-next{
-    right: -30px;
-  }
-  .services .owl-nav .owl-prev{
-    left: -25px;
-  }
-  .our-courses .owl-nav .owl-next{
-    right: -30px;
-  }
-  .our-courses .owl-nav .owl-prev{
-    left: -25px;
-  }
+.blog-filters li {
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: #f2f2f2;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 1200px) {
-  .main-banner .right-image {
-    margin-left: 60px;
-  }
-  .main-banner .header-text h2 {
-    font-size: 62px;
-  }
-  .header-area {
-    background: rgb(219,138,222) !important;
-    background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%) !important;
-  }
-  .services .owl-nav .owl-next{
-    right: -70px;
-  }
-  .services .owl-nav .owl-prev{
-    left: -65px;
-  }
-  .our-courses .owl-nav .owl-next{
-    right: -70px;
-  }
-  .our-courses .owl-nav .owl-prev{
-    left: -65px;
-  }
+.blog-filters li.filter-active {
+  background: rgb(219,138,222);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+  opacity: 0.9;
 }
 
-@media (max-width: 1085px) {
-  .services .owl-nav .owl-next{
-    right: -30px;
-  }
-  .services .owl-nav .owl-prev{
-    left: -25px;
-  }
-  .our-courses .owl-nav .owl-next{
-    right: -30px;
-  }
-  .our-courses .owl-nav .owl-prev{
-    left: -25px;
-  }
+/* Blog cards */
+.blog-card {
+  display: block;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #000;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.35s ease;
 }
 
-@media (max-width: 1005px) {
-  .services .owl-nav .owl-next{
-    display: none;
-  }
-  .services .owl-nav .owl-prev{
-    display: none;
-  }
-  .our-courses .owl-nav .owl-next{
-    display: none;
-  }
-  .our-courses .owl-nav .owl-prev{
-    display: none;
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Blog category tag */
+.blog-card .tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+/* Fix mobile stacking */
+@media (max-width: 768px) {
+  .blog-filters {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }
 
-@media (max-width: 992px) {
+/* ===== FIX BLOG PAGE HEADING GAP ===== */
 
-  .main-banner .header-text {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .main-banner .right-image {
-    margin-left: 0px;
-  }
-  section.our-courses ul.nacc {
-    margin-left: 0px !important;
-  }
-  section.simple-cta {
-    margin-top: 0px;
-  }
-  section.simple-cta .left-image {
-    margin-right: 0px;
-    margin-bottom: 45px;
-  }
-  section.contact-us .contact-info {
-    margin-top: 15px;
-  }
-  section.contact-us #contact {
-    margin-left: 0px;
-  }
-  section.contact-us #contact button {
-    float: none;
-  }
-  section.get-info .left-image {
-    margin-right: 0px;
-    margin-bottom: 30px;
-  }
-  section.get-info .info-item {
-    margin-top: 60px;
-  }
-  section.our-office #video {
-    margin-left: 0px;
-    margin-top: 30px;
-  }
-  section.featured-product .left-info .info-item,
-  section.featured-product .right-info .info-item {
-    text-align: center;
-    background-color: #fff;
-    position: relative;
-    z-index: 2;
-  }
-  section.featured-product .left-info .info-item .icon {
-    right: 50%;
-    transform: translateX(40px);
-  }
-  section.featured-product .right-info .info-item .icon {
-    left: 50%;
-    transform: translateX(-40px);
-  }
-  section.featured-product .product-image {
-    margin: 60px
-  }
-  section.our-team ul.nacc li .left-content span a,
-  section.our-courses ul.nacc li .right-content span {
-    margin-right: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media (max-width: 767px) {
-  .header-area .main-nav .nav li.has-sub ul.sub-menu {
-    display: none;
-  }
-  section.our-courses ul.nacc li .left-image,
-  section.our-team ul.nacc li .right-image {
-    position: relative;
-    margin-right: 0px;
-    margin-left: 0px;
-    transform: translateY(-0%);
-  }
-  section.our-courses ul.nacc li .left-image img,
-  section.our-team ul.nacc li .right-image img {
-    border-radius: 15px;
-  }
-  section.our-courses ul.nacc li,
-  section.our-team ul.nacc li {
-    padding: 0px;
-  }
-  section.our-courses ul.nacc li .right-content {
-    margin-left: 0px;
-    padding: 30px;
-  }
-  section.our-team ul.nacc li .left-content {
-    margin-right: 0px;
-    padding: 30px;
-  }
-  section.our-team .naccs .menu div {
-    width: 14%;
-    margin: 0px 5px;
-  }
-  section.our-team .naccs .menu div.active img {
-    border: 3px solid #dc8cdb;
-  }
-  section.our-team .naccs .menu div h4,
-  section.our-team .naccs .menu div span {
-    display: none;
-  }
-  section.more-info .count-area-content .count-title {
-    font-size: 22px;
-  }
+.page-heading {
+  padding-bottom: 10px !important;   /* reduce big padding */
+  margin-bottom: 0 !important;       /* remove extra gap */
 }

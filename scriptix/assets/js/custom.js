@@ -14,23 +14,23 @@
 	  }
 	});
 	
-	$('.filters ul li').click(function(){
-        $('.filters ul li').removeClass('active');
-        $(this).addClass('active');
-          
-          var data = $(this).attr('data-filter');
-          $grid.isotope({
-            filter: data
-          })
-        });
+	var $grid;
+	if ($(".grid").length) {
+		$grid = $(".grid").isotope({
+			itemSelector: ".all",
+			percentPosition: true,
+			masonry: {
+				columnWidth: ".all"
+			}
+		});
 
-        var $grid = $(".grid").isotope({
-          itemSelector: ".all",
-          percentPosition: true,
-          masonry: {
-            columnWidth: ".all"
-          }
-        })
+		$('.filters ul li').click(function(){
+			$('.filters ul li').removeClass('active');
+			$(this).addClass('active');
+			var data = $(this).attr('data-filter');
+			$grid.isotope({ filter: data });
+		});
+	}
 
 
 	const Accordion = {
