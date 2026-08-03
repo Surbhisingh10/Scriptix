@@ -1,0 +1,466 @@
+/*
+---------------------------------------------
+For Startups landing page
+---------------------------------------------
+*/
+
+/* Shared pill / eyebrow tag */
+.startup-pill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+  background: rgb(219,138,222);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+}
+
+.startup-gradient-text {
+  background: rgb(219,138,222);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= HERO ================= */
+.startup-hero {
+  padding: 190px 0 90px;
+  background-color: #f7f7f7;
+}
+
+.startup-hero h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.startup-hero p.lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #7a7a7a;
+  max-width: 480px;
+  margin-bottom: 34px;
+}
+
+.startup-hero .hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.startup-hero .white-button a {
+  border: 1px solid #e2e2e2;
+}
+
+/* Abstract UI mockup graphic */
+.startup-hero-graphic {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+}
+
+.startup-hero-graphic .graphic-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.startup-hero-graphic .graphic-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #eee;
+}
+
+.startup-hero-graphic .graphic-line {
+  height: 10px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  margin-bottom: 12px;
+}
+
+.startup-hero-graphic .graphic-line.short {
+  width: 55%;
+}
+
+.startup-hero-graphic .graphic-boxes {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.startup-hero-graphic .graphic-box {
+  flex: 1;
+  height: 90px;
+  border-radius: 12px;
+  background: #f4f4f4;
+}
+
+.startup-hero-graphic .graphic-box.accent {
+  background: linear-gradient(-145deg, rgba(219,138,222,0.18) 0%, rgba(246,191,159,0.28) 100%);
+}
+
+/* ================= LIFECYCLE ================= */
+.startup-lifecycle-item {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.startup-lifecycle-item .icon {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f0f7;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.startup-lifecycle-item .icon i {
+  font-size: 24px;
+  color: #dc8cdb;
+}
+
+.startup-lifecycle-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.startup-lifecycle-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #7a7a7a;
+}
+
+/* ================= TECH STACK ================= */
+.startup-stack {
+  background-color: #f7f7f7;
+}
+
+.startup-stack-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.startup-stack-header h6 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.startup-stack-header h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+}
+
+.startup-stack-header p {
+  color: #7a7a7a;
+  font-size: 15px;
+  margin: 8px 0 0;
+  max-width: 480px;
+}
+
+.startup-stack-header a {
+  color: #dc8cdb;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.startup-stack-header a:hover {
+  opacity: 0.8;
+}
+
+.startup-stack-card {
+  height: 100%;
+  border-radius: 18px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.startup-stack-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.startup-stack-card .icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f0f7;
+  margin-bottom: 20px;
+}
+
+.startup-stack-card .icon i {
+  font-size: 18px;
+  color: #dc8cdb;
+}
+
+.startup-stack-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.startup-stack-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #7a7a7a;
+  margin-bottom: 20px;
+}
+
+.startup-stack-card .stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.startup-stack-card .stack-tags span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  background: #f2f2f2;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.startup-stack-card.dark {
+  background: #14141c;
+}
+
+.startup-stack-card.dark .icon {
+  background: rgba(255,255,255,0.08);
+}
+
+.startup-stack-card.dark .icon i {
+  color: #f6bf9f;
+}
+
+.startup-stack-card.dark h4 {
+  color: #fff;
+}
+
+.startup-stack-card.dark p {
+  color: #a9a9b3;
+}
+
+.startup-stack-card.dark .stack-tags span {
+  background: rgba(255,255,255,0.08);
+  color: #e6e6ee;
+}
+
+/* ================= WHY STARTUPS ================= */
+.startup-why-image {
+  position: relative;
+}
+
+.startup-why-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+}
+
+.startup-why-badge {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  background: rgb(219,138,222);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 18px 26px;
+  box-shadow: 0 15px 35px rgba(219,138,222,0.35);
+  text-align: center;
+}
+
+.startup-why-badge .stat {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+  display: block;
+}
+
+.startup-why-badge .label {
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+}
+
+.startup-why-content h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.startup-why-list-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.startup-why-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.startup-why-list-item .icon {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f0f7;
+}
+
+.startup-why-list-item .icon i {
+  font-size: 18px;
+  color: #dc8cdb;
+}
+
+.startup-why-list-item h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.startup-why-list-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #7a7a7a;
+  margin: 0;
+}
+
+/* ================= CTA BAND ================= */
+.startup-cta {
+  border-radius: 26px;
+  padding: 70px 40px;
+  text-align: center;
+  background: rgb(219,138,222);
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+}
+
+.startup-cta h2 {
+  font-size: 34px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.startup-cta p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  max-width: 560px;
+  margin: 0 auto 34px;
+  line-height: 1.6;
+}
+
+.startup-cta .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.startup-cta .cta-buttons a {
+  padding: 13px 30px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.startup-cta .cta-buttons a.solid {
+  background: #fff;
+  color: #dc8cdb;
+}
+
+.startup-cta .cta-buttons a.solid:hover {
+  opacity: 0.9;
+}
+
+.startup-cta .cta-buttons a.outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+.startup-cta .cta-buttons a.outline:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .startup-hero {
+    padding: 170px 0 60px;
+    text-align: center;
+  }
+  .startup-hero p.lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .startup-hero .hero-buttons {
+    justify-content: center;
+  }
+  .startup-hero-graphic {
+    margin-top: 50px;
+  }
+  .startup-lifecycle-item {
+    margin-bottom: 40px;
+  }
+  .startup-why-image {
+    margin-bottom: 70px;
+  }
+  .startup-why-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .startup-hero h1 {
+    font-size: 34px;
+  }
+  .startup-stack-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .startup-cta {
+    padding: 50px 24px;
+  }
+  .startup-cta h2 {
+    font-size: 26px;
+  }
+}
