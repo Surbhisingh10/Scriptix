@@ -107,25 +107,26 @@
           <h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Send us a message</h2>
           <p class="text-on-surface-variant font-body-md text-body-md">We'll get back to you within 24 hours.</p>
         </div>
-        <form class="flex flex-col gap-6">
+        <form class="flex flex-col gap-6" action="https://formspree.io/f/mrbnwazd" method="POST">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="flex flex-col gap-2">
               <label class="font-label-md text-label-md text-on-surface" for="name">Full Name</label>
-              <input class="glass-input rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface" id="name" name="name" placeholder="Jane Doe" type="text" required>
+              <input class="glass-input rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface" id="name" name="name" placeholder="Jane Doe" type="text" autocomplete="name" required>
             </div>
             <div class="flex flex-col gap-2">
               <label class="font-label-md text-label-md text-on-surface" for="email">Work Email</label>
-              <input class="glass-input rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface" id="email" name="email" placeholder="jane@company.com" type="email" required>
+              <input class="glass-input rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface" id="email" name="email" placeholder="jane@company.com" type="email" autocomplete="email" required>
             </div>
           </div>
           <div class="flex flex-col gap-2">
             <label class="font-label-md text-label-md text-on-surface" for="subject">Subject</label>
-            <input class="glass-input rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface" id="subject" name="subject" placeholder="How can we help you?" type="text" required>
+            <input class="glass-input rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface" id="subject" name="_subject" placeholder="How can we help you?" type="text" required>
           </div>
           <div class="flex flex-col gap-2">
             <label class="font-label-md text-label-md text-on-surface" for="message">Message</label>
             <textarea class="glass-input rounded-xl px-4 py-3 font-body-md text-body-md text-on-surface resize-none" id="message" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
           </div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button class="mt-4 bg-gradient-to-r from-primary to-vibrant-pink text-white font-label-md text-label-md py-4 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
             <span>Send Message</span>
             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
