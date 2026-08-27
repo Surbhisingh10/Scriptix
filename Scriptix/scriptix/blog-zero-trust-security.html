@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="assets/images/logo-mark.png">
+<title>Zero-Trust Security in the Age of Generative AI | Scriptix</title>
+<meta name="description" content="Why perimeter security isn't enough once AI models are wired into production systems — and how to apply zero-trust principles.">
+<link rel="canonical" href="https://scriptix.in/blog-zero-trust-security.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Scriptix">
+<meta property="og:url" content="https://scriptix.in/blog-zero-trust-security.html">
+<meta property="og:title" content="Zero-Trust Security in the Age of Generative AI | Scriptix">
+<meta property="og:description" content="Why perimeter security isn't enough once AI models are wired into production systems — and how to apply zero-trust principles.">
+<meta property="og:image" content="https://scriptix.in/assets/images/blog-zero-trust-security.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zero-Trust Security in the Age of Generative AI | Scriptix">
+<meta name="twitter:description" content="Why perimeter security isn't enough once AI models are wired into production systems — and how to apply zero-trust principles.">
+<meta name="twitter:image" content="https://scriptix.in/assets/images/blog-zero-trust-security.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/scriptix.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Zero-Trust Security in the Age of Generative AI",
+  "image": ["https://scriptix.in/assets/images/blog-zero-trust-security.png"],
+  "author": { "@type": "Organization", "name": "The Scriptix Team" },
+  "publisher": { "@type": "Organization", "name": "Scriptix", "logo": { "@type": "ImageObject", "url": "https://scriptix.in/assets/images/logo-mark.png" } },
+  "datePublished": "2026-09-01",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://scriptix.in/blog-zero-trust-security.html" }
+}
+</script>
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-surface/70 backdrop-blur-xl border-b border-white/20 shadow-sm">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+    <a href="index.html" class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-primary">
+      <img src="assets/images/logo-mark.png" alt="" aria-hidden="true" class="h-6 w-auto">
+      Scriptix
+    </a>
+    <nav class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+      <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors duration-300">Home</a>
+      <a href="our-services.html" class="text-on-surface-variant hover:text-primary transition-colors duration-300">Services</a>
+      <a href="about-us.html" class="text-on-surface-variant hover:text-primary transition-colors duration-300">About Us</a>
+      <a href="blogs.html" class="text-primary font-bold border-b-2 border-primary pb-1">Blogs</a>
+      <a href="contact-us.html" class="text-on-surface-variant hover:text-primary transition-colors duration-300">Contact Us</a>
+    </nav>
+    <a href="contact-us.html" class="hidden md:inline-block bg-gradient-to-r from-primary to-vibrant-pink text-on-primary font-label-md text-label-md px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300">
+      Get in Touch
+    </a>
+    <button data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu" class="md:hidden text-primary">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <div data-mobile-menu id="mobile-menu" class="hidden md:hidden border-t border-outline-variant/30 bg-surface/95 backdrop-blur-xl px-margin-mobile py-6 flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+    <a href="index.html">Home</a>
+    <a href="our-services.html">Services</a>
+    <a href="about-us.html">About Us</a>
+    <a href="blogs.html" class="text-primary font-bold">Blogs</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="contact-us.html" class="mt-2 text-center bg-gradient-to-r from-primary to-vibrant-pink text-on-primary font-label-md text-label-md px-6 py-3 rounded-full">Get in Touch</a>
+  </div>
+</header>
+
+<main class="pt-40 pb-24">
+  <article class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
+    <a href="blogs.html" class="inline-flex items-center gap-2 text-primary font-label-md text-label-md mb-8 hover:opacity-80 transition-opacity">
+      <span class="material-symbols-outlined text-[18px]">arrow_back</span> Back to Insights
+    </a>
+
+    <span class="inline-block bg-vibrant-pink/10 text-vibrant-pink px-3 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider mb-6">Tech Trends</span>
+    <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-deep-navy mb-6">Zero-Trust Security in the Age of Generative AI</h1>
+    <div class="flex flex-wrap items-center gap-3 text-on-surface-variant font-body-md text-body-md mb-10">
+      <span>The Scriptix Team</span>
+      <span aria-hidden="true">&middot;</span>
+      <span>September 2026</span>
+      <span aria-hidden="true">&middot;</span>
+      <span>7 min read</span>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden mb-12 h-64 md:h-[420px]">
+      <img src="assets/images/blog-zero-trust-security.png" alt="Glowing digital shield representing zero-trust, AI-driven security" class="w-full h-full object-cover">
+    </div>
+
+    <div class="space-y-6">
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">As large language models move from experimental chatbots to components wired directly into production systems, they quietly expand the attack surface in ways traditional perimeter security was never designed to address. A model that can read internal documents, call internal APIs, or trigger internal workflows is, from a security standpoint, a new kind of privileged user &mdash; one that takes instructions from text.</p>
+
+      <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">Why Perimeter Security Isn't Enough Anymore</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Traditional security models assume that anything inside the network boundary is roughly trustworthy. That assumption breaks down when an AI system inside that boundary can be manipulated by content it processes &mdash; an email, a support ticket, a document &mdash; into taking actions its designers never intended. The threat isn't necessarily an external attacker breaching the perimeter; it's the AI system itself being turned against the systems it has access to.</p>
+
+      <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">Applying Zero-Trust Principles to AI Systems</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Zero-trust security has always rested on a simple idea: verify every request, regardless of where it originates, rather than trusting anything by default because it's "inside." Applied to AI, that means every call a model or agent makes to an internal system should be authenticated and authorized on its own merits, not waved through because it came from a trusted service. It also means treating prompt injection &mdash; instructions smuggled into a model's input by an attacker &mdash; as a first-class threat category, not an edge case.</p>
+
+      <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">Practical Steps We Recommend</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Segment AI workloads from core infrastructure so a compromised model can't reach further than its specific task requires. Scope API keys and credentials to the narrowest set of permissions the model actually needs, rather than reusing broad service accounts. Validate and sanitize model outputs before they're allowed to trigger any downstream action, the same way you'd validate any other untrusted input. Log every model call in enough detail to reconstruct what happened after the fact. And for anything with real consequences &mdash; financial transactions, customer communications, changes to production systems &mdash; keep a human approval gate in place.</p>
+
+      <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">The Compliance Angle</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">For organizations operating under SOC 2, HIPAA, or similar frameworks, AI systems that touch regulated data raise questions those frameworks weren't written with in mind. Auditors increasingly want to see an auditable decision trail: what data a model accessed, what it did with it, and who approved any resulting action. Building that traceability in from the start is far cheaper than retrofitting it after an audit finding.</p>
+
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">None of this is an argument against adopting AI in production systems &mdash; it's an argument for treating it with the same security discipline as any other privileged system component. The organizations getting this right aren't the ones moving slowest; they're the ones who built verification and least-privilege access in from day one.</p>
+    </div>
+
+    <div class="mt-16 glass-panel rounded-xl p-8 md:p-12 text-center">
+      <h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Building AI Into a System You Need to Secure?</h3>
+      <p class="font-body-md text-body-md text-on-surface-variant mb-6">Let's talk about how Scriptix can help apply zero-trust principles to your AI-driven systems.</p>
+      <a href="contact-us.html" class="inline-block bg-gradient-to-r from-primary to-vibrant-pink text-on-primary font-label-md text-label-md px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300">Get in Touch</a>
+    </div>
+
+    <div class="mt-16">
+      <h3 class="font-headline-md text-headline-md text-deep-navy mb-6">Continue Reading</h3>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <a href="blog-autonomous-ai-agents.html" class="glass-panel rounded-lg overflow-hidden card-hover group">
+          <div class="h-32 overflow-hidden">
+            <img src="assets/images/blog-featured-team.png" alt="Scriptix team collaborating in a modern office lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4">
+            <span class="text-primary font-label-sm text-label-sm block mb-1">Tech Trends</span>
+            <h4 class="font-label-md text-label-md text-deep-navy font-bold">The Next Frontier: Autonomous AI Agents in Enterprise Workflows</h4>
+          </div>
+        </a>
+        <a href="blog-scaling-infrastructure.html" class="glass-panel rounded-lg overflow-hidden card-hover group">
+          <div class="h-32 overflow-hidden">
+            <img src="assets/images/blog-scaling-infrastructure.png" alt="Abstract 3D visualization of scaling infrastructure with serverless architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4">
+            <span class="text-primary font-label-sm text-label-sm block mb-1">Tech Trends</span>
+            <h4 class="font-label-md text-label-md text-deep-navy font-bold">Scaling Infrastructure with Serverless Architectures</h4>
+          </div>
+        </a>
+        <a href="blog-mobile-sdk.html" class="glass-panel rounded-lg overflow-hidden card-hover group">
+          <div class="h-32 overflow-hidden">
+            <img src="assets/images/blog-mobile-sdk.png" alt="Mobile app dashboard displayed on a smartphone resting on a desk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-4">
+            <span class="text-primary font-label-sm text-label-sm block mb-1">Tech Trends</span>
+            <h4 class="font-label-md text-label-md text-deep-navy font-bold">What a Mobile AI SDK Should Actually Look Like</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer class="bg-surface-container-highest border-t border-outline-variant/30">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 flex flex-col items-center gap-8 text-center">
+    <a href="index.html" class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">
+      <img src="assets/images/logo-mark.png" alt="" aria-hidden="true" class="h-6 w-auto opacity-80">
+      Scriptix
+    </a>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-8 font-body-md text-body-md text-on-surface-variant">
+      <a href="privacy-policy.html" class="hover:text-primary hover:underline transition-colors">Privacy Policy</a>
+      <a href="terms-of-service.html" class="hover:text-primary hover:underline transition-colors">Terms of Service</a>
+      <a href="faq.html" class="hover:text-primary hover:underline transition-colors">FAQ</a>
+      <a href="cookie-policy.html" class="hover:text-primary hover:underline transition-colors">Cookie Policy</a>
+    </div>
+    <p class="font-body-md text-body-md text-on-surface-variant opacity-70">Copyright &copy; 2026 Scriptix.in. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

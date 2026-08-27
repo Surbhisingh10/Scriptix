@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* Material Symbols requires an explicit font-family + variation-settings rule;
+     the Google Fonts <link> only loads the font file itself. */
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+}
+
+@layer components {
+  /* .glass-panel and .glass-card are kept as separate rules (not a comma
+     selector) because Tailwind's --minify step was silently dropping the
+     second selector in a combined rule during cssnano compression. */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .glass-input {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid theme("colors.outline-variant");
+    transition: all 0.3s ease;
+  }
+  .glass-input:focus {
+    border-color: theme("colors.primary");
+    box-shadow: 0 0 0 3px rgba(137, 53, 167, 0.1);
+    outline: none;
+  }
+
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Reveal-on-scroll: visible by default so content never depends on JS to
+     be seen. JS (main.js) only adds the transition classes when supported. */
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+  }
+  .js-reveal-ready .reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .js-reveal-ready .reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .timeline-line-draw {
+    height: 100%;
+  }
+  .js-reveal-ready .timeline-line-draw {
+    height: 0;
+    transition: height 1.5s ease-out;
+  }
+  .js-reveal-ready .timeline-line-draw.active {
+    height: 100%;
+  }
+
+  /* Animated CSS gradient behind the hero WebGL canvas. The canvas paints
+     fully opaque once it initializes, covering this — but if WebGL is
+     unavailable (disabled/blocked GPU), this keeps the hero from going flat. */
+  .shader-fallback {
+    background:
+      radial-gradient(circle at 20% 30%, rgba(137, 53, 167, 0.28), transparent 45%),
+      radial-gradient(circle at 80% 70%, rgba(220, 140, 219, 0.28), transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(137, 53, 167, 0.14), transparent 60%);
+    background-size: 200% 200%;
+    animation: shader-fallback-drift 18s ease-in-out infinite;
+  }
+  @keyframes shader-fallback-drift {
+    0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+    50% { background-position: 100% 100%, 0% 0%, 30% 70%; }
+  }
+
+  .capability-tab {
+    @apply px-5 py-2.5 rounded-full text-label-md whitespace-nowrap transition-all duration-300 text-on-surface-variant hover:text-primary hover:bg-primary/10 hover:-translate-y-0.5;
+  }
+  .capability-tab.is-active {
+    @apply bg-gradient-to-r from-primary to-vibrant-pink text-on-primary shadow-md hover:text-on-primary hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .capability-chip {
+    @apply flex items-center gap-2 px-4 py-3 rounded-xl border border-outline-variant/40 bg-surface-container-lowest text-label-md text-deep-navy transition-all duration-300 hover:border-primary/50 hover:bg-primary/5 hover:shadow-md hover:-translate-y-0.5;
+  }
+  .capability-chip:hover .material-symbols-outlined {
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
+  }
+
+  /* Blog article content components: stat cards, tables, pull-quotes, numbered steps */
+  .blog-stat-card {
+    @apply bg-surface-container-low rounded-xl p-5 text-center;
+  }
+  .blog-stat-number {
+    @apply block text-headline-lg text-transparent bg-clip-text bg-gradient-to-r from-primary to-vibrant-pink mb-1;
+  }
+  .blog-stat-label {
+    @apply text-label-sm text-on-surface-variant;
+  }
+
+  .blog-table-wrapper {
+    @apply overflow-x-auto rounded-xl border border-outline-variant/30;
+  }
+  .blog-table {
+    @apply w-full text-left border-collapse min-w-[560px];
+  }
+  .blog-table th {
+    @apply bg-gradient-to-r from-primary to-vibrant-pink text-on-primary text-label-md px-5 py-3 whitespace-nowrap;
+  }
+  .blog-table td {
+    @apply px-5 py-4 text-body-md text-on-surface-variant align-top border-t border-outline-variant/20;
+  }
+  .blog-table td:first-child {
+    @apply text-deep-navy font-medium whitespace-nowrap;
+  }
+  .blog-table tr:nth-child(even) td {
+    @apply bg-surface-container-low;
+  }
+
+  .blog-quote {
+    @apply border-l-4 border-primary bg-primary/5 rounded-r-xl px-6 py-5 italic text-deep-navy text-body-lg;
+  }
+
+  .blog-step {
+    @apply flex gap-4 bg-surface-container-low rounded-xl p-5;
+  }
+  .blog-step-number {
+    @apply flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-primary to-vibrant-pink text-on-primary flex items-center justify-center text-label-md font-bold;
+  }
+
+  .blog-filter-btn {
+    @apply text-on-surface-variant hover:text-primary transition-colors;
+  }
+  .blog-filter-btn.is-active {
+    @apply text-primary border-b-2 border-primary;
+  }
+
+  .blog-page-btn {
+    @apply w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors text-label-md;
+  }
+  .blog-page-btn.is-active {
+    @apply bg-primary text-on-primary hover:bg-primary;
+  }
+  .blog-page-btn:disabled {
+    @apply opacity-30 cursor-not-allowed hover:bg-transparent;
+  }
+
+  /* Placeholder for photo slots awaiting real assets */
+  .photo-placeholder {
+    background: linear-gradient(135deg, theme("colors.primary" / 12%), theme("colors.vibrant-pink" / 12%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: theme("colors.primary");
+  }
+}
