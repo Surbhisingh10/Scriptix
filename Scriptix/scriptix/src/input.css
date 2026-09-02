@@ -130,6 +130,38 @@
     transition: transform 0.3s ease;
   }
 
+  /* Tech stack marquee: an infinite leftward-scrolling strip. The track holds
+     the card set twice back-to-back (the second copy is aria-hidden) so that
+     animating from translateX(0) to translateX(-50%) loops seamlessly. */
+  .tech-marquee {
+    @apply overflow-hidden;
+  }
+  .tech-marquee-track {
+    width: max-content;
+    animation: tech-marquee-scroll 32s linear infinite;
+  }
+  .tech-marquee:hover .tech-marquee-track {
+    animation-play-state: paused;
+  }
+  .tech-marquee-card {
+    @apply flex-shrink-0 w-72;
+  }
+  @keyframes tech-marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tech-marquee {
+      overflow-x: auto;
+    }
+    .tech-marquee-track {
+      animation: none;
+    }
+    .tech-marquee-track [data-marquee-clone] {
+      display: none;
+    }
+  }
+
   /* Blog article content components: stat cards, tables, pull-quotes, numbered steps */
   .blog-stat-card {
     @apply bg-surface-container-low rounded-xl p-5 text-center;
