@@ -11,22 +11,83 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Core Capabilities tabs. First tab/panel renders visible by default in
-  // the HTML, so this only handles switching, not initial visibility.
-  document.querySelectorAll(".capability-tab").forEach((tab) => {
-    tab.addEventListener("click", () => {
-      document.querySelectorAll(".capability-tab").forEach((t) => {
-        t.classList.remove("is-active");
-        t.setAttribute("aria-selected", "false");
-      });
-      tab.classList.add("is-active");
-      tab.setAttribute("aria-selected", "true");
+  // the HTML. Auto-advances every 2s until a user manually picks a tab, at
+  // which point autoplay stops for good; hovering the section pauses it.
+  const capabilityTabsRoot = document.getElementById("capability-tabs-autoplay");
+  const capabilityTabs = Array.from(document.querySelectorAll(".capability-tab"));
+  const capabilityPanels = document.querySelectorAll(".capability-panel");
 
-      const target = tab.dataset.tab;
-      document.querySelectorAll(".capability-panel").forEach((panel) => {
-        panel.classList.toggle("hidden", panel.dataset.panel !== target);
+  function activateCapabilityTab(index) {
+    const tab = capabilityTabs[index];
+    capabilityTabs.forEach((t) => {
+      t.classList.remove("is-active");
+      t.setAttribute("aria-selected", "false");
+    });
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
+
+    const target = tab.dataset.tab;
+    capabilityPanels.forEach((panel) => {
+      panel.classList.toggle("hidden", panel.dataset.panel !== target);
+    });
+  }
+
+  if (capabilityTabsRoot && capabilityTabs.length) {
+    const AUTOPLAY_MS = 2000;
+    let autoplayEnabled = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let currentIndex = Math.max(capabilityTabs.findIndex((t) => t.classList.contains("is-active")), 0);
+    let timerId = null;
+    let progressAnim = null;
+
+    function stopProgress() {
+      clearTimeout(timerId);
+      timerId = null;
+      if (progressAnim) {
+        progressAnim.cancel();
+        progressAnim = null;
+      }
+    }
+
+    function startProgress() {
+      stopProgress();
+      if (!autoplayEnabled) return;
+      const bar = capabilityTabs[currentIndex].querySelector(".capability-tab-progress");
+      if (bar) {
+        progressAnim = bar.animate([{ width: "0%" }, { width: "100%" }], {
+          duration: AUTOPLAY_MS,
+          easing: "linear",
+          fill: "forwards",
+        });
+      }
+      timerId = setTimeout(() => {
+        currentIndex = (currentIndex + 1) % capabilityTabs.length;
+        activateCapabilityTab(currentIndex);
+        startProgress();
+      }, AUTOPLAY_MS);
+    }
+
+    capabilityTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        autoplayEnabled = false;
+        stopProgress();
+        currentIndex = index;
+        activateCapabilityTab(index);
       });
     });
-  });
+
+    capabilityTabsRoot.addEventListener("mouseenter", () => {
+      if (!autoplayEnabled) return;
+      clearTimeout(timerId);
+      timerId = null;
+      if (progressAnim) progressAnim.pause();
+    });
+    capabilityTabsRoot.addEventListener("mouseleave", () => {
+      if (!autoplayEnabled) return;
+      startProgress();
+    });
+
+    startProgress();
+  }
 
   // Blog listing: category filter + pagination (3 posts per page).
   // Every card ships visible in the HTML, so a JS failure just means no
