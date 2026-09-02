@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="assets/images/logo-mark.png">
 <title>What a Mobile AI SDK Should Look Like | Scriptix</title>
-<meta name="description" content="What we think a well-designed mobile AI SDK should handle for developers — authentication, retries, error handling, and a fast path to a first feature.">
+<meta name="description" content="What we think a well-designed mobile AI SDK should handle for developers: authentication, retries, error handling, and a fast path to a first feature.">
 <link rel="canonical" href="https://scriptix.in/blog-mobile-sdk">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Scriptix">
 <meta property="og:url" content="https://scriptix.in/blog-mobile-sdk">
 <meta property="og:title" content="What a Mobile AI SDK Should Actually Look Like | Scriptix">
-<meta property="og:description" content="What we think a well-designed mobile AI SDK should handle for developers — authentication, retries, error handling, and a fast path to a first feature.">
+<meta property="og:description" content="What we think a well-designed mobile AI SDK should handle for developers: authentication, retries, error handling, and a fast path to a first feature.">
 <meta property="og:image" content="https://scriptix.in/assets/images/blog-mobile-sdk.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What a Mobile AI SDK Should Look Like | Scriptix">
-<meta name="twitter:description" content="What we think a well-designed mobile AI SDK should handle for developers — authentication, retries, error handling, and a fast path to a first feature.">
+<meta name="twitter:description" content="What we think a well-designed mobile AI SDK should handle for developers: authentication, retries, error handling, and a fast path to a first feature.">
 <meta name="twitter:image" content="https://scriptix.in/assets/images/blog-mobile-sdk.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,7 +90,7 @@
     </div>
 
     <div class="space-y-6">
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Every mobile team integrating AI features eventually hits the same wall: before you get to the interesting part of the app, you're rebuilding the same plumbing &mdash; authentication and key management, request signing, retry and error handling, usage telemetry. None of that is specific to your product. Here's what we think a well-designed mobile AI SDK should handle for you, based on the patterns we consistently see work.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Every mobile team integrating AI features eventually hits the same wall: before you get to the interesting part of the app, you're rebuilding the same plumbing: authentication and key management, request signing, retry and error handling, usage telemetry. None of that is specific to your product. Here's what we think a well-designed mobile AI SDK should handle for you, based on the patterns we consistently see work.</p>
 
       <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">Why This Plumbing Keeps Getting Rebuilt</h2>
       <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Every developer integrating a third-party AI service ends up solving the same problems before they ever reach the interesting part of their app: authentication and key management, request signing, retry and error handling, basic usage telemetry. That plumbing rarely changes from one integration to the next, which is exactly why it belongs in a shared SDK rather than reinvented per project.</p>
@@ -99,10 +99,10 @@
       <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">A well-designed SDK should ship with secure authentication and API key management out of the box, so credentials never need to be hardcoded or passed through your own backend just to reach a platform. Request batching and automatic retries should handle the flaky-network realities of mobile devices as a default, not an afterthought. Structured error handling should surface problems in a form your app can actually act on, rather than a raw HTTP status code. And built-in usage hooks should give you visibility into how features are actually being used, without any extra instrumentation work.</p>
 
       <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">The Bar: Minutes, Not Days</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">The right benchmark for a mobile SDK is how fast a team gets from installation to a first working feature. Done well, that's initializing a client with an API key, calling a single method with the input you want processed, and handling a typed response &mdash; no manual request construction, no separate networking layer to maintain.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">The right benchmark for a mobile SDK is how fast a team gets from installation to a first working feature. Done well, that's initializing a client with an API key, calling a single method with the input you want processed, and handling a typed response, with no manual request construction and no separate networking layer to maintain.</p>
 
       <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">What We'd Prioritize First</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Native Swift and Kotlin support come first, since that's where most teams start. Cross-platform wrappers for React Native and Flutter matter too, once the native foundation is solid &mdash; along with clear guidance for the trickier cases: offline queuing, background processing, and graceful degradation when connectivity drops.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Native Swift and Kotlin support come first, since that's where most teams start. Cross-platform wrappers for React Native and Flutter matter too, once the native foundation is solid, along with clear guidance for the trickier cases: offline queuing, background processing, and graceful degradation when connectivity drops.</p>
     </div>
 
     <div class="mt-16 glass-panel rounded-xl p-8 md:p-12 text-center">

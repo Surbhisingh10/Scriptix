@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="assets/images/logo-mark.png">
 <title>Zero-Trust Security in the Age of Generative AI | Scriptix</title>
-<meta name="description" content="Why perimeter security isn't enough once AI models are wired into production systems — and how to apply zero-trust principles.">
+<meta name="description" content="Why perimeter security isn't enough once AI models are wired into production systems, and how to apply zero-trust principles.">
 <link rel="canonical" href="https://scriptix.in/blog-zero-trust-security">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Scriptix">
 <meta property="og:url" content="https://scriptix.in/blog-zero-trust-security">
 <meta property="og:title" content="Zero-Trust Security in the Age of Generative AI | Scriptix">
-<meta property="og:description" content="Why perimeter security isn't enough once AI models are wired into production systems — and how to apply zero-trust principles.">
+<meta property="og:description" content="Why perimeter security isn't enough once AI models are wired into production systems, and how to apply zero-trust principles.">
 <meta property="og:image" content="https://scriptix.in/assets/images/blog-zero-trust-security.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Zero-Trust Security in the Age of Generative AI | Scriptix">
-<meta name="twitter:description" content="Why perimeter security isn't enough once AI models are wired into production systems — and how to apply zero-trust principles.">
+<meta name="twitter:description" content="Why perimeter security isn't enough once AI models are wired into production systems, and how to apply zero-trust principles.">
 <meta name="twitter:image" content="https://scriptix.in/assets/images/blog-zero-trust-security.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,26 +90,26 @@
     </div>
 
     <div class="space-y-6">
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">As large language models move from experimental chatbots to components wired directly into production systems, they quietly expand the attack surface in ways traditional perimeter security was never designed to address. A model that can read internal documents, call internal APIs, or trigger internal workflows is, from a security standpoint, a new kind of privileged user &mdash; one that takes instructions from text.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">As large language models move from experimental chatbots to components wired directly into production systems, they quietly expand the attack surface in ways traditional perimeter security was never designed to address. A model that can read internal documents, call internal APIs, or trigger internal workflows is, from a security standpoint, a new kind of privileged user: one that takes instructions from text.</p>
 
       <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">Why Perimeter Security Isn't Enough Anymore</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Traditional security models assume that anything inside the network boundary is roughly trustworthy. That assumption breaks down when an AI system inside that boundary can be manipulated by content it processes &mdash; an email, a support ticket, a document &mdash; into taking actions its designers never intended. The threat isn't necessarily an external attacker breaching the perimeter; it's the AI system itself being turned against the systems it has access to.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Traditional security models assume that anything inside the network boundary is roughly trustworthy. That assumption breaks down when an AI system inside that boundary can be manipulated by content it processes, such as an email, a support ticket, or a document, into taking actions its designers never intended. The threat isn't necessarily an external attacker breaching the perimeter; it's the AI system itself being turned against the systems it has access to.</p>
 
       <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">Applying Zero-Trust Principles to AI Systems</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Zero-trust security has always rested on a simple idea: verify every request, regardless of where it originates, rather than trusting anything by default because it's "inside." Applied to AI, that means every call a model or agent makes to an internal system should be authenticated and authorized on its own merits, not waved through because it came from a trusted service. It also means treating prompt injection &mdash; instructions smuggled into a model's input by an attacker &mdash; as a first-class threat category, not an edge case.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Zero-trust security has always rested on a simple idea: verify every request, regardless of where it originates, rather than trusting anything by default because it's "inside." Applied to AI, that means every call a model or agent makes to an internal system should be authenticated and authorized on its own merits, not waved through because it came from a trusted service. It also means treating prompt injection (instructions smuggled into a model's input by an attacker) as a first-class threat category, not an edge case.</p>
 
       <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">Practical Steps We Recommend</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Segment AI workloads from core infrastructure so a compromised model can't reach further than its specific task requires. Scope API keys and credentials to the narrowest set of permissions the model actually needs, rather than reusing broad service accounts. Validate and sanitize model outputs before they're allowed to trigger any downstream action, the same way you'd validate any other untrusted input. Log every model call in enough detail to reconstruct what happened after the fact. And for anything with real consequences &mdash; financial transactions, customer communications, changes to production systems &mdash; keep a human approval gate in place.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Segment AI workloads from core infrastructure so a compromised model can't reach further than its specific task requires. Scope API keys and credentials to the narrowest set of permissions the model actually needs, rather than reusing broad service accounts. Validate and sanitize model outputs before they're allowed to trigger any downstream action, the same way you'd validate any other untrusted input. Log every model call in enough detail to reconstruct what happened after the fact. And for anything with real consequences, such as financial transactions, customer communications, or changes to production systems, keep a human approval gate in place.</p>
 
       <h2 class="font-headline-md text-headline-md text-deep-navy pt-4">The Compliance Angle</h2>
       <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">For organizations operating under SOC 2, HIPAA, or similar frameworks, AI systems that touch regulated data raise questions those frameworks weren't written with in mind. Auditors increasingly want to see an auditable decision trail: what data a model accessed, what it did with it, and who approved any resulting action. Building that traceability in from the start is far cheaper than retrofitting it after an audit finding.</p>
 
-      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">None of this is an argument against adopting AI in production systems &mdash; it's an argument for treating it with the same security discipline as any other privileged system component. The organizations getting this right aren't the ones moving slowest; they're the ones who built verification and least-privilege access in from day one.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">None of this is an argument against adopting AI in production systems. It's an argument for treating it with the same security discipline as any other privileged system component. The organizations getting this right aren't the ones moving slowest; they're the ones who built verification and least-privilege access in from day one.</p>
     </div>
 
     <div class="mt-16 glass-panel rounded-xl p-8 md:p-12 text-center">
       <h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Building AI Into a System You Need to Secure?</h3>
-      <p class="font-body-md text-body-md text-on-surface-variant mb-6">Let's talk about how Scriptix's <a href="cybersecurity-consulting" class="text-primary hover:underline">cybersecurity consulting</a> can help apply zero-trust principles to your AI-driven systems &mdash; this matters especially in <a href="healthcare" class="text-primary hover:underline">healthcare</a>, where patient data privacy is non-negotiable.</p>
+      <p class="font-body-md text-body-md text-on-surface-variant mb-6">Let's talk about how Scriptix's <a href="cybersecurity-consulting" class="text-primary hover:underline">cybersecurity consulting</a> can help apply zero-trust principles to your AI-driven systems. This matters especially in <a href="healthcare" class="text-primary hover:underline">healthcare</a>, where patient data privacy is non-negotiable.</p>
       <a href="contact-us" class="inline-block bg-gradient-to-r from-primary to-vibrant-pink text-on-primary font-label-md text-label-md px-8 py-4 rounded-full hover:shadow-lg transition-all duration-300">Get in Touch</a>
     </div>
 
